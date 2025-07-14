@@ -75,7 +75,11 @@ public static class VMDLEditor
 		try
 		{
 			var content = File.ReadAllText( vmdlPath );
-			var modifiedContent = AddLODConfiguration( content, lodObjFilename, lodSize );
+			var vmdlDir = Path.GetDirectoryName( vmdlPath );
+
+			vmdlDir = System.IO.Path.GetRelativePath( Project.Current.GetAssetsPath(), vmdlPath );
+			vmdlDir = vmdlDir.Replace( Path.GetFileName( vmdlDir ) ,"");
+			var modifiedContent = AddLODConfiguration( content, lodObjFilename, lodSize, vmdlDir );
 			File.WriteAllText( vmdlPath, modifiedContent );
 
 			Log.Info( $"Updated VMDL file: {vmdlPath}" );
@@ -86,7 +90,7 @@ public static class VMDLEditor
 		}
 	}
 
-	private static string AddLODConfiguration( string content, string lodObjFilename, float lodSize )
+	private static string AddLODConfiguration( string content, string lodObjFilename, float lodSize, string pathName )
 	{
 		var lines = content.Split( '\n' ).ToList();
 
@@ -111,7 +115,7 @@ public static class VMDLEditor
 		var originalMeshName = FindOriginalMeshName( lines, renderMeshListIndex );
 
 		// Insert LOD mesh files before the closing bracket
-		var lodMeshEntries = GenerateLODMeshEntries( lodObjFilename );
+		var lodMeshEntries = GenerateLODMeshEntries( lodObjFilename, pathName );
 		lines.InsertRange( childrenEndIndex, lodMeshEntries );
 
 		// Find the root node's children array and add LODGroupList there
@@ -429,7 +433,7 @@ public static class VMDLEditor
 		return "unnamed_1";
 	}
 
-	private static List<string> GenerateLODMeshEntries( string lodObjFilename )
+	private static List<string> GenerateLODMeshEntries( string lodObjFilename, string pathName )
 	{
 		var entries = new List<string>();
 
@@ -455,7 +459,7 @@ public static class VMDLEditor
 			entries.AddRange( new[]
 			{
 				"\t\t\t\t\t{", "\t\t\t\t\t\t_class = \"RenderMeshFile\"", $"\t\t\t\t\t\tname = \"{lodName}\"",
-				$"\t\t\t\t\t\tfilename = \"{lodObjFilename}\"",
+				$"\t\t\t\t\t\tfilename = \"{pathName.Replace( "\\", "/" )}{lodObjFilename}\"",
 				"\t\t\t\t\t\timport_translation = [ 0.0, 0.0, 0.0 ]",
 				"\t\t\t\t\t\timport_rotation = [ 0.0, 0.0, 0.0 ]", "\t\t\t\t\t\timport_scale = 1.0",
 				"\t\t\t\t\t\talign_origin_x_type = \"None\"", "\t\t\t\t\t\talign_origin_y_type = \"None\"",
@@ -463,7 +467,7 @@ public static class VMDLEditor
 				"\t\t\t\t\t\timport_filter = ", "\t\t\t\t\t\t{", "\t\t\t\t\t\t\texclude_by_default = false",
 				"\t\t\t\t\t\t\texception_list = ", "\t\t\t\t\t\t\t["
 			} );
-
+			
 			// Add exclusion list
 			entries.AddRange( exclusionList );
 
@@ -931,7 +935,7 @@ public static class VMDLEditor
 		private static MeshData LoadFBXMesh( string path )
 		{
 			Log.Info(
-				$"Loading FBX mesh from: {System.IO.Path.GetRelativePath( Editor.FileSystem.Content.GetFullPath( path ), path )}" );
+				$"Loading FBX mesh from: {System.IO.Path.GetRelativePath( Project.Current.GetAssetsPath(), path )}" );
 
 			try
 			{

@@ -23,7 +23,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "agnaslng.fbx"
+						filename = "what/agnaslng.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -43,7 +43,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "agnaslng_LODs"
-						filename = "agnaslng_LODs.obj"
+						filename = "what/agnaslng_LODs.obj"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -66,7 +66,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "agnaslng_LODs1"
-						filename = "agnaslng_LODs.obj"
+						filename = "what/agnaslng_LODs.obj"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -89,7 +89,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "agnaslng_LODs2"
-						filename = "agnaslng_LODs.obj"
+						filename = "what/agnaslng_LODs.obj"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -112,7 +112,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "agnaslng_LODs3"
-						filename = "agnaslng_LODs.obj"
+						filename = "what/agnaslng_LODs.obj"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -135,7 +135,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "agnaslng_LODs4"
-						filename = "agnaslng_LODs.obj"
+						filename = "what/agnaslng_LODs.obj"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -171,7 +171,7 @@
 					},
 					{
 						_class = "LODGroup"
-						switch_threshold = 119.900002
+						switch_threshold = 147.899994
 						meshes = 
 						[
 							"agnaslng_LODs",
@@ -179,7 +179,7 @@
 					},
 					{
 						_class = "LODGroup"
-						switch_threshold = 239.899994
+						switch_threshold = 295.899994
 						meshes = 
 						[
 							"agnaslng_LODs1",
@@ -187,7 +187,7 @@
 					},
 					{
 						_class = "LODGroup"
-						switch_threshold = 359.799988
+						switch_threshold = 443.799988
 						meshes = 
 						[
 							"agnaslng_LODs2",
@@ -195,7 +195,7 @@
 					},
 					{
 						_class = "LODGroup"
-						switch_threshold = 539.700012
+						switch_threshold = 665.799988
 						meshes = 
 						[
 							"agnaslng_LODs3",
@@ -203,7 +203,7 @@
 					},
 					{
 						_class = "LODGroup"
-						switch_threshold = 779.599976
+						switch_threshold = 961.700012
 						meshes = 
 						[
 							"agnaslng_LODs4",
