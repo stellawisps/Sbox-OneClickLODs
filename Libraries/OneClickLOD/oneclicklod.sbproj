@@ -1,0 +1,14 @@
+{
+  "Title": "OneClickLOD",
+  "Type": "library",
+  "Org": "stellawisps",
+  "Ident": "oneclicklod",
+  "Schema": 1,
+  "IncludeSourceFiles": false,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "Mounts": null,
+  "IsStandaloneOnly": false,
+  "Metadata": {}
+}

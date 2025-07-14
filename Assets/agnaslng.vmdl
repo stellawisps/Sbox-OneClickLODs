@@ -1,0 +1,220 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = [  ]
+						use_global_default = true
+						global_default_material = "materials/default.vmat"
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "agnaslng.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"Icosphere_001",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "agnaslng_LODs"
+						filename = "agnaslng_LODs.obj"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"LOD_1",
+								"LOD_2",
+								"LOD_3",
+								"LOD_4",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "agnaslng_LODs1"
+						filename = "agnaslng_LODs.obj"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"LOD_0",
+								"LOD_2",
+								"LOD_3",
+								"LOD_4",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "agnaslng_LODs2"
+						filename = "agnaslng_LODs.obj"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"LOD_0",
+								"LOD_1",
+								"LOD_3",
+								"LOD_4",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "agnaslng_LODs3"
+						filename = "agnaslng_LODs.obj"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"LOD_0",
+								"LOD_1",
+								"LOD_2",
+								"LOD_4",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "agnaslng_LODs4"
+						filename = "agnaslng_LODs.obj"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"LOD_0",
+								"LOD_1",
+								"LOD_2",
+								"LOD_3",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"unnamed_1",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 119.900002
+						meshes = 
+						[
+							"agnaslng_LODs",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 239.899994
+						meshes = 
+						[
+							"agnaslng_LODs1",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 359.799988
+						meshes = 
+						[
+							"agnaslng_LODs2",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 539.700012
+						meshes = 
+						[
+							"agnaslng_LODs3",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 779.599976
+						meshes = 
+						[
+							"agnaslng_LODs4",
+						]
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}
