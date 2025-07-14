@@ -1056,7 +1056,7 @@ public static class VMDLEditor
 
 		private static Vector3 ConvertNormalToOBJCoordinates( Vector3 sboxNormal )
 		{
-			return new Vector3( -sboxNormal.y, sboxNormal.z, sboxNormal.x );
+			return new Vector3( sboxNormal.y, sboxNormal.z, sboxNormal.x );
 		}
 
 		private static void WriteOBJFile( string path, List<MeshData> lodMeshes )
